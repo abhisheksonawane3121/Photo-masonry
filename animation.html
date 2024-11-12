@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #abc{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .xyz{
+            width: 100px;
+            height: 200px;
+        }
+        
+        .animateUp{
+            animation-name: abc;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+
+        }
+        @keyframes abc {
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-50px);
+            }
+            100%{
+                transform: translateY(-100px);
+            }
+        }
+        .animatedown{
+            animation-name: p;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+
+        }
+        @keyframes p {
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(50px);
+            }
+            100%{
+                transform: translateY(100px);
+            }
+        }
+        .animateside{
+            animation-name: a;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+        }
+        @keyframes a {
+            0%{
+                transform: translateX(0px);
+            }
+            50%{
+                transform: translateX(50px);
+            }
+            100%{
+                transform: translateX(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="abc">
+        <div class="xyz" id="first_ballon" onmouseenter="animateUp()">
+            <img src="download.jpg" alt="" width="100px">
+        </div>
+        <div class="xyz" id="second_ballon" onmouseenter="animatedown()">
+            <img src="download.jpg" alt="" width="100px">
+        </div>
+        <div class="xyz" id="third_ballon" onmouseenter="animateside()">
+            <img src="download.jpg" alt="" width="100px">
+        </div>
+    </section>
+
+    <script>
+        function animateUp(){
+            document.getElementById('first_ballon').classList.add('animateUp');
+        }
+    </script>
+    <script>
+        function animatedown(){
+            document.getElementById('second_ballon').classList.add('animatedown');
+        }
+    </script>
+    <script>
+        function animateside(){
+            document.getElementById('third_ballon').classList.add('animateside');
+        }
+    </script>
+</body>
+</html>
